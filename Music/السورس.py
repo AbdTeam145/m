@@ -39,7 +39,7 @@ async def ping(client, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m_reply.edit(
-        f"**◊ البنك ⇾** `{delta_ping * 1000:.3f}` **بالثانية ◊** \n**◊ مدة التشغيل ⇾** `{uptime}`:"
+        f"<b>◊ البنك ⇾</b> `{delta_ping * 1000:.3f}` <b>بالثانية ◊</b> \n<b>◊ مدة التشغيل ⇾</b> `{uptime}`"
     )
 
 
