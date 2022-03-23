@@ -1,0 +1,51 @@
+{
+    "name": "source music",
+    "description": "it's the best source for listen to music in groups calls",
+    "logo": "https://telegra.ph/file/6d03e325540b55ceefdd3.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "jmthon",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/uhGod/m",
+    "env": {
+        "SESSION": {
+            "description": "هنا ضع كود البايروكرام",
+            "required": true
+        },
+        "API_ID": {
+            "description": "هنا ضع الايبي ايدي",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "العلامة التي تضعها قبل الامر مثلا ( ! # • ) تستطيع تغييرها",
+            "required": false,
+            "value": "،"
+        },
+        "API_HASH": {
+            "description": "هنا ضع الايبي هاش",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "هنا ضع ايدي حسابك كمطور للبوت",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
