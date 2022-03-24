@@ -371,7 +371,7 @@ async def playfrom(client, m: Message):
             limit = 10
             lmt = 9
         await m.delete()
-        hmm = await m.reply(f"**◊ يتم احضار {limit}  اغنية عشوائية من {chat} ◊**")
+        hmm = await m.reply(f"**◊ يتم احضار {limit}  اغاني عشوائية الى {chat} ◊**")
         try:
             async for x in bot.search_messages(chat, limit=limit, filter="audio"):
                 location = await x.download()
@@ -401,7 +401,7 @@ async def playfrom(client, m: Message):
          )
             await hmm.delete()
             await m.reply(  
-                   f"**◊ يضيف {lmt} أغنية في قائمة الانتظار \n**◊ ارسل {HNDLR}عشوائي لاضافة اغنية في قائمة الانتضار ◊**" 
+                   f"**◊ يضيف {lmt} اغاني في قائمة الانتظار \n**◊ ارسل {HNDLR}عشوائي لاضافة اغنية في قائمة الانتضار ◊**" 
                          )
         except Exception as e:
             await hmm.edit(f"**◊ هناك خطا ⇾** \n`{e}`")
